@@ -22,7 +22,7 @@ export const authMiddleware = async (
     .where(eq(user.id, data.user.id));
 
   if (!existingUser) {
-    return res.json({ success: false, message: "User not found" });
+    return res.json({ success: false, message: "User not found" }).status(401);
   }
 
   req.user = data.user;
