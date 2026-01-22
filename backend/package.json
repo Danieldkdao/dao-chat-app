@@ -10,7 +10,9 @@
     "db:generate": "drizzle-kit generate --config ./src/drizzle.config.ts",
     "db:migrate": "drizzle-kit migrate --config ./src/drizzle.config.ts",
     "db:studio": "drizzle-kit studio --config ./src/drizzle.config.ts",
-    "db:auth": "npx @better-auth/cli generate --output ./src/db/schemas/auth-schema.ts"
+    "db:auth": "npx @better-auth/cli generate --output ./src/db/schemas/auth-schema.ts",
+    "start": "node src/server.ts"
+  
   },
   "keywords": [],
   "author": "",
