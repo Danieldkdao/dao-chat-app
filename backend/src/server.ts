@@ -8,8 +8,10 @@ import { route as chatRoute } from "./routes/chat-route.ts";
 import { errorHandlingMiddleware } from "./middleware/middlewares.ts";
 import { createServer } from "http";
 import { initializeSocket } from "./utils/socket.ts";
+import { keepOpen } from "./config/cron.ts";
 
 const app = express();
+keepOpen.start()
 const httpServer = createServer(app);
 initializeSocket(httpServer);
 

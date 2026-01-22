@@ -8,7 +8,7 @@ import { ThemeProvider } from "next-themes";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
-    {/* <StrictMode> */}
+     <StrictMode> 
       <ThemeProvider
         attribute="class"
         defaultTheme="dark"
@@ -17,6 +17,6 @@ createRoot(document.getElementById("root")!).render(
         <App />
         <Toaster position="bottom-right" />
       </ThemeProvider>
-    {/* </StrictMode> */}
+     </StrictMode> 
   </BrowserRouter>,
 );
