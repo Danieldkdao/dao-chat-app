@@ -35,7 +35,7 @@ function App() {
     if (!socket.connected) {
       socket.connect();
     }
-  }, [isPending, data?.user]);
+  }, [isPending, data?.user, location.pathname, navigate]);
 
   if (isPending) {
     return (

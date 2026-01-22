@@ -1,7 +1,8 @@
+import { SERVER_URL } from "@/lib/auth-client";
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: SERVER_URL,
   withCredentials: true,
 });
 
