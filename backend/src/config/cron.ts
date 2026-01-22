@@ -3,7 +3,7 @@ import https from 'https'
 
 export const keepOpen = new cron.CronJob("*/5 * * * *", () => {
   https
-    .get(process.env.API_URL!, (res) => {
+    .get(process.env.BETTER_AUTH_URL!, (res) => {
       if (res.statusCode === 200) console.log("GET request sent successfully!");
       else console.log("GET request failed: ", res.statusCode);
     })
