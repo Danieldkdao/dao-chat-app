@@ -17,10 +17,9 @@ import {
 import { useEffect, useState, type Dispatch, type SetStateAction } from "react";
 import api from "@/config/axios";
 import type { Chat, ChatParticipant, Response } from "@/lib/types";
-import { Loader2Icon, MessageCirclePlusIcon, SearchIcon } from "lucide-react";
+import { Loader2Icon, MessageCirclePlusIcon } from "lucide-react";
 import type { User } from "better-auth";
 import { CustomAvatar } from "../custom-avatar";
-import { Input } from "../ui/input";
 import { UserProfileButton } from "./user-profile-button";
 import { useLocation, useNavigate } from "react-router";
 import { ErrorState } from "../error-state";
@@ -251,13 +250,6 @@ export const HomeSidebar = () => {
             <MessageCirclePlusIcon />
             Start new chat
           </Button>
-        </div>
-        <div className="relative w-full px-4">
-          <Input
-            placeholder="Search chats..."
-            className="h-9 bg-white w-full pl-7 text-sm focus-visible:border-input focus-visible:ring-transparent"
-          />
-          <SearchIcon className="size-4 absolute left-6 top-1/2 -translate-y-1/2 text-muted-foreground" />
         </div>
         <SidebarContent>
           <SidebarGroup>
