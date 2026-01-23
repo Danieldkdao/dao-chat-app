@@ -11,7 +11,7 @@ import { initializeSocket } from "./utils/socket.ts";
 import { keepOpen } from "./config/cron.ts";
 
 const app = express();
-// keepOpen.start()
+keepOpen.start()
 const httpServer = createServer(app);
 initializeSocket(httpServer);
 

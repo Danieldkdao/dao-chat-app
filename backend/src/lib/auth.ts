@@ -26,7 +26,7 @@ export const auth = betterAuth({
   },
   crossSubDomainCookies: {
     enabled: true,
-    domain: ".vercel.app",
+    domain: ".onrender.com",
   },
   socialProviders: {
     google: {
