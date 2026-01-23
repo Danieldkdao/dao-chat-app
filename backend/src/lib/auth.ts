@@ -3,6 +3,7 @@ import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { db } from "../db/db.ts";
 
 export const auth = betterAuth({
+  baseUrl: process.env.BETTER_AUTH_URL!,
   secret: process.env.BETTER_AUTH_SECRET!,
   trustedOrigins: [process.env.FRONTEND_URL!],
   database: drizzleAdapter(db, {
@@ -16,6 +17,12 @@ export const auth = betterAuth({
       enabled: true,
       maxAge: 60,
     },
+  },
+  advanced: {
+    defaultCookieAttributes: {
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+      secure: process.env.NODE_ENV === "production",
+    }
   },
   socialProviders: {
     google: {
